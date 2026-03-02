@@ -1,0 +1,23 @@
+services:
+  backend:
+    build: ./backend
+    container_name: factory-backend
+    volumes:
+      - db-data:/data
+    environment:
+      - DB_PATH=/data/factory.db
+    ports:
+      - "8000:8000"
+    restart: on-failure
+
+  frontend:
+    build: ./frontend
+    container_name: factory-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: on-failure
+
+volumes:
+  db-data:
