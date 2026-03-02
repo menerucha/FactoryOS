@@ -11,7 +11,7 @@ A production-style full-stack web application that ingests computer vision event
 
 ### Run with Docker (recommended)
 ```bash
-git clone (https://github.com/menerucha/FactoryOS.git)
+git clone https://github.com/menerucha/FactoryOS.git
 cd factory-dashboard
 docker-compose up --build
 ```
